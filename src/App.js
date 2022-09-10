@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+
+const title = 'Hacker-News';
+
+const welcome = {
+  greeting: 'Welcome to Hacker-News',
+  description: 'Here you can read the most exciting news on hacking, cyber security and the world of Computers.'
+};
+
+function searchPage(search) {
+  return search;
+}
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{title}</h1>
+      <h4>{welcome.title} {welcome.description}</h4>
+      <label htmlFor="search">Search:  </label>
+      <input id="search" type="text"></input>
+      <button>{searchPage('Find')}</button>
     </div>
   );
 }
